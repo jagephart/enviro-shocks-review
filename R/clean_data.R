@@ -301,7 +301,7 @@ write.csv(df, "Output/review_data_clean.csv", row.names = FALSE)
 
 # Write out file with review references
 refs <- df %>%
-  select(publication.title, publication.journal, publication.doi) %>%
+  select(publication.title, publication.journal, publication.date, publication.doi) %>%
   distinct()
 write.csv(refs, "Output/review_references.csv", row.names = FALSE)
 
